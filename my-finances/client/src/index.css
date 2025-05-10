@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Melhorias para modo escuro */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .dark body {
+    @apply bg-gray-900;
+  }
+  
+  /* Estilos para inputs no modo escuro */
+  .dark input[type="text"],
+  .dark input[type="number"],
+  .dark select,
+  .dark textarea {
+    @apply bg-gray-800 border-gray-700 text-gray-100;
+  }
+  
+  /* Estilos para cards no modo escuro */
+  .dark .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  /* Melhoria nas sombras para modo escuro */
+  .dark .shadow-md,
+  .dark .shadow-lg,
+  .dark .shadow-xl {
+    --tw-shadow-color: rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}

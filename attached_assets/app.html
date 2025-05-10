@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat com IA (Mistral 7B)</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+    }
+    #chat {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 40px;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    #messages {
+      max-height: 400px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .msg {
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 15px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+    .user {
+      background-color: #007bff;
+      color: white;
+      margin-left: auto;
+      text-align: right;
+    }
+    .bot {
+      background-color: #444;
+      color: white;
+      margin-right: auto;
+      text-align: left;
+    }
+    #userInput {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat">
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Digite sua mensagem e pressione Enter" autofocus />
+  </div>
+
+    async function sendMessage(text) {
+      if (!text.trim()) return;
+
+      addMessage(text, "user");
+
+      const prompt = `### Instrução:\nResponda de forma curta e direta a esta pergunta:\n${text}\n\n### Resposta:\n`;
+
+      try {
+        const res = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${HF_TOKEN}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            inputs: prompt,
+            parameters: {
+              max_new_tokens: 60,
+              temperature: 0.5,
+              top_p: 0.9,
+              repetition_penalty: 1.2,
+              do_sample: true,
+              return_full_text: false
+            }
+          })
+        });
+
+        if (!res.ok) {
+          const error = await res.json();
+          throw new Error(error?.error || "Erro desconhecido");
+        }
+
+        const data = await res.json();
+        const output = data[0]?.generated_text?.trim() || "Sem resposta.";
+        addMessage(output, "bot");
+
+      } catch (err) {
+        addMessage("Erro: " + err.message, "bot");
+        console.error(err);
+      }
+    }
+
+    function addMessage(text, sender) {
+      const messagesDiv = document.getElementById("messages");
+      const msg = document.createElement("div");
+      msg.className = `msg ${sender}`;
+      msg.textContent = text;
+      messagesDiv.appendChild(msg);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    document.getElementById("userInput").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        const text = e.target.value;
+        e.target.value = "";
+        sendMessage(text);
+      }
+    });
+  </script>
+</body>
+</html>

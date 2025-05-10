@@ -1,0 +1,361 @@
+@import "https://fonts.googleapis.com/css?family=Work+Sans:0,400;0,700;0,500&display=swap";
+
+/* Estilo geral do dashboard financeiro */
+.financial-dashboard {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1176px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Barra de busca e cabeçalho */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 630px;
+}
+
+.search-input input {
+  color: #9ca3af;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-btn {
+  background: #fff;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cabeçalho com título e botões */
+.title-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.dashboard-title {
+  color: #252c32;
+  font-family: Work Sans;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-button {
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.filter-text {
+  color: #252c32;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.add-button {
+  border-radius: 8px;
+  background: #656ce1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.add-text {
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Cards resumo */
+.finance-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.statistic-box {
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.icon-container {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.balance-icon {
+  background: #f0f0f5;
+}
+
+.income-icon {
+  background: #e9fbff;
+}
+
+.expense-icon {
+  background: #fff6ee;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.percentage-value {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.positive {
+  color: #5db57a;
+}
+
+.negative {
+  color: #dd525a;
+}
+
+.box-title {
+  color: #6b7280;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.box-value {
+  color: #252c32;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+/* Transações */
+.transactions-box {
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+}
+
+.transactions-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.transactions-title {
+  color: #6b7280;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  flex: 1;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.transaction-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transaction-icon.expense {
+  background-color: #ffb26a;
+}
+
+.transaction-icon.income {
+  background-color: #afe9c2;
+}
+
+.transaction-icon.investment {
+  background-color: #72def6;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+
+.transaction-description {
+  color: #252c32;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.transaction-date {
+  color: #252c32;
+  font-family: Work Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.transaction-amount {
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.transaction-amount.expense {
+  color: #dd525a;
+}
+
+.transaction-amount.income {
+  color: #5db57a;
+}
+
+.transaction-amount.investment {
+  color: #72def6;
+}
+
+/* Modo escuro */
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 16px;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+  
+  .title-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .finance-boxes {
+    grid-template-columns: 1fr;
+  }
+}

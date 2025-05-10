@@ -1,0 +1,551 @@
+Implement the following design in React. Use the following files generated from a Figma design as a specification and guide:
+
+```src/styles/BgParaPowerBi.module.css
+@import "https://fonts.googleapis.com/css?family=Inter:0,400&display=swap";
+.BgParaPowerBi_1_52 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.Rectangle_1_1_53 {
+  background: #eeeefe;
+  flex-shrink: 0;
+  width: 1280px;
+  height: 720px;
+}
+.Group_2_1_54 {
+  flex-shrink: 0;
+  width: 663px;
+  height: 547.066px;
+}
+.Frame_2_1_57 {
+  background: #fcfbfc;
+  flex-shrink: 0;
+  width: 1153px;
+  height: 630px;
+  overflow: hidden;
+}
+.Rectangle_2_1_58 {
+  background: #fff;
+  flex-shrink: 0;
+  width: 86px;
+  height: 630px;
+}
+.Group_1_1_59 {
+  flex-shrink: 0;
+  width: 73.5px;
+  height: 464px;
+}
+.IconlyLightTimeCircle_1_63 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2.75px;
+  display: flex;
+}
+.TimeCircle_1_65 {
+  flex-shrink: 0;
+  width: 18.5px;
+  height: 18.5px;
+}
+.IconlyLightHome_1_64 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px 2.5px;
+  display: flex;
+}
+.Home_1_69 {
+  flex-shrink: 0;
+  width: 19px;
+  height: 20px;
+}
+.IconlyLightChart_1_65 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  display: flex;
+}
+.Chart_1_72 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+.IconlyLightBag_3_1_66 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2.5px 3px 3px;
+  display: flex;
+}
+.Bag_2_1_78 {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18.5px;
+}
+.IconlyLightPaper_1_67 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2.75px 4.197px 2.885px 4.25px;
+  display: flex;
+}
+.Paper_1_82 {
+  flex-shrink: 0;
+  width: 15.553px;
+  height: 18.365px;
+}
+.IconlyLight_2User_1_68 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 3.25px 2.771px 3.193px 2.75px;
+  display: flex;
+}
+.User_1_88 {
+  flex-shrink: 0;
+  width: 18.48px;
+  height: 17.557px;
+}
+.MinhasFinanças_1_69 {
+  color: #0009;
+  flex-shrink: 0;
+  width: 821px;
+  height: 44px;
+  font-family: Segoe UI;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-block;
+}
+.Line_3_1_70 {
+  box-sizing: border-box;
+  background: #2ebfa5;
+  width: 2px;
+  height: 35px;
+}
+.Line_1_1_71 {
+  box-sizing: border-box;
+  background: #cbcbcb;
+  width: 0.5px;
+  height: 630px;
+}
+.Line_2_1_72 {
+  box-sizing: border-box;
+  background: #cbcbcb;
+  width: 1028px;
+  height: 0.5px;
+}
+.Rectangle_3_1_73 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 182.911px;
+  height: 113.745px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_13_1_76 {
+  background: linear-gradient(#5a48f9 0%, #312787 100%);
+  border-radius: 12.722px;
+  flex-shrink: 0;
+  width: 182.911px;
+  height: 284.305px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_8_1_77 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 182.273px;
+  height: 113.745px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_10_1_78 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 183px;
+  height: 282px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_5_1_79 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 182.178px;
+  height: 113.745px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_9_1_80 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 585px;
+  height: 290.908px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_11_1_81 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 995.843px;
+  height: 45px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_6_1_82 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 181.996px;
+  height: 113.745px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.Rectangle_14_1_83 {
+  background: #fff;
+  border-radius: 19.456px;
+  flex-shrink: 0;
+  width: 182.15px;
+  height: 113.745px;
+  box-shadow: 1.497px 2.993px 8.98px #6434f826;
+}
+.FundsLine_1_84 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  display: flex;
+}
+.Group_2_115 {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+.PriceTag_3Line_1_85 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  display: flex;
+}
+.Group_2_119 {
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+}
+.Dashboard_3Line_1_86 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  display: flex;
+}
+.Group_2_127 {
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+}
+.HandCoinLine_1_87 {
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  display: flex;
+}
+.Group_2_131 {
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+}
+.Vector_1_88 {
+  fill: var(--primaria-02, #aaa1ff);
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+```
+
+---
+
+```src/components/assets/Group_2.tsx
+import React from 'react';
+export default function Group_2() {
+  return <svg width="663" height="548" viewBox="0 0 663 548" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1_54)">
+<rect width="120.858" height="566.648" rx="12.7215" transform="matrix(0.794744 0.606945 -0.600018 0.799987 339.999 20.9023)" fill="url(#paint0_linear_1_54)"/>
+</g>
+<g filter="url(#filter1_d_1_54)">
+<rect width="120.858" height="566.648" rx="12.7215" transform="matrix(0.794744 0.606945 -0.600018 0.799987 566.949 0.501465)" fill="url(#paint1_linear_1_54)"/>
+</g>
+<defs>
+<filter id="filter0_d_1_54" x="-2.40853" y="20.0388" width="443.861" height="534.379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1.49665" dy="2.9933"/>
+<feGaussianBlur stdDeviation="4.48995"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0.203922 0 0 0 0 0.972549 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_54"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_54" result="shape"/>
+</filter>
+<filter id="filter1_d_1_54" x="224.541" y="-0.362121" width="443.861" height="534.379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1.49665" dy="2.9933"/>
+<feGaussianBlur stdDeviation="4.48995"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0.203922 0 0 0 0 0.972549 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_54"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_54" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_1_54" x1="60.429" y1="0" x2="60.429" y2="566.648" gradientUnits="userSpaceOnUse">
+<stop stopColor="#5A48F9"/>
+<stop offset="1" stopColor="#312787"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_54" x1="60.429" y1="0" x2="60.429" y2="566.648" gradientUnits="userSpaceOnUse">
+<stop stopColor="#5A48F9"/>
+<stop offset="0.0001" stopColor="#312787"/>
+</linearGradient>
+</defs>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Group_1.tsx
+import React from 'react';
+export default function Group_1() {
+  return <svg width="74" height="464" viewBox="0 0 74 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35.979 44.5C12.9524 37.7 2.3986 12 0 0V232H73.5V80.5C70.5874 71.3333 59.0056 51.3 35.979 44.5Z" fill="#6434F8"/>
+<path d="M35.979 419.5C12.9524 426.3 2.3986 452 0 464L0 232L73.5 232L73.5 383.5C70.5874 392.667 59.0056 412.7 35.979 419.5Z" fill="#6434F8"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/TimeCircle.tsx
+import React from 'react';
+export default function TimeCircle() {
+  return <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M19.2503 9.81544C19.2503 14.9244 15.1093 19.0654 10.0003 19.0654C4.8913 19.0654 0.750305 14.9244 0.750305 9.81544C0.750305 4.70644 4.8913 0.565445 10.0003 0.565445C15.1093 0.565445 19.2503 4.70644 19.2503 9.81544Z" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M13.4319 12.7578L9.66193 10.5088V5.66184" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Home.tsx
+import React from 'react';
+export default function Home() {
+  return <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.1577 19.5863V16.5196C7.15769 15.7396 7.79361 15.1058 8.5815 15.1005H11.4676C12.2592 15.1005 12.901 15.7359 12.901 16.5196V16.5196V19.5959C12.9008 20.2581 13.4347 20.7994 14.1035 20.8149H16.0276C17.9456 20.8149 19.5005 19.2756 19.5005 17.3768V17.3768V8.65278C19.4902 7.90577 19.136 7.20429 18.5385 6.74797L11.9582 1.50024C10.8054 0.586508 9.16669 0.586508 8.01391 1.50024L1.46251 6.7575C0.862747 7.21196 0.507875 7.91461 0.500488 8.6623V17.3768C0.500488 19.2756 2.05536 20.8149 3.9734 20.8149H5.89745C6.58284 20.8149 7.13846 20.2649 7.13846 19.5863V19.5863" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Chart.tsx
+import React from 'react';
+export default function Chart() {
+  return <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.37194 9.01665V15.8768" stroke="#2EBFA5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.0386 5.73407V15.8768" stroke="#2EBFA5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M14.6291 12.6418V15.8768" stroke="#2EBFA5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M14.6862 0.814941H5.31477C2.04811 0.814941 0.000488281 3.12703 0.000488281 6.4001V15.2298C0.000488281 18.5029 2.03858 20.8149 5.31477 20.8149H14.6862C17.9624 20.8149 20.0005 18.5029 20.0005 15.2298V6.4001C20.0005 3.12703 17.9624 0.814941 14.6862 0.814941Z" stroke="#2EBFA5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Bag_2.tsx
+import React from 'react';
+export default function Bag_2() {
+  return <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.7734 7.11998V4.08798C12.7734 2.00398 11.0844 0.314977 9.00136 0.314977C6.91736 0.305977 5.22036 1.98698 5.21136 4.07098V4.08798V7.11998" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M13.7427 18.8153H4.25827C1.90618 18.8153 0.000488281 16.9103 0.000488281 14.5603V9.04428C0.000488281 6.69428 1.90618 4.78928 4.25827 4.78928H13.7427C16.0948 4.78928 18.0005 6.69428 18.0005 9.04428V14.5603C18.0005 16.9103 16.0948 18.8153 13.7427 18.8153Z" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Paper.tsx
+import React from 'react';
+export default function Paper() {
+  return <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M10.7383 0.576742H4.08529C2.00529 0.568742 0.300291 2.22674 0.251291 4.30574V15.0187C0.205291 17.1317 1.88029 18.8827 3.99329 18.9297C4.02429 18.9297 4.05429 18.9307 4.08529 18.9297H12.0743C14.1683 18.8447 15.8183 17.1147 15.8033 15.0187V5.85274L10.7383 0.576742Z" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.4756 0.564941V3.47394C10.4756 4.89394 11.6236 6.04494 13.0436 6.04894H15.7986" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.2886 13.1734H4.88861" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M8.2437 9.42094H4.8877" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/User.tsx
+import React from 'react';
+export default function User() {
+  return <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M7.592 12.0217C11.281 12.0217 14.434 12.5807 14.434 14.8137C14.434 17.0467 11.302 17.6217 7.592 17.6217C3.902 17.6217 0.75 17.0677 0.75 14.8337C0.75 12.5997 3.881 12.0217 7.592 12.0217Z" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M7.59199 8.83474C5.16999 8.83474 3.20599 6.87174 3.20599 4.44974C3.20599 2.02774 5.16999 0.064743 7.59199 0.064743C10.013 0.064743 11.977 2.02774 11.977 4.44974C11.986 6.86274 10.036 8.82574 7.62299 8.83474H7.59199Z" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M14.4836 7.69654C16.0846 7.47154 17.3176 6.09754 17.3206 4.43454C17.3206 2.79554 16.1256 1.43554 14.5586 1.17854" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M16.5959 11.5471C18.1469 11.7781 19.2299 12.3221 19.2299 13.4421C19.2299 14.2131 18.7199 14.7131 17.8959 15.0261" stroke="#CBCBCB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Group.tsx
+import React from 'react';
+export default function Group() {
+  return <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.73462 10.2595C6.03299 10.2595 6.31914 10.378 6.53011 10.589C6.74109 10.8 6.85962 11.0862 6.85962 11.3845C8.62715 11.3819 10.3437 11.9766 11.7309 13.072H14.1721C15.6717 13.072 17.0184 13.7245 17.9454 14.7595H21.4846C22.548 14.7592 23.5898 15.0604 24.489 15.6281C25.3882 16.1958 26.1081 17.0067 26.5651 17.9669C23.9045 21.478 19.5969 23.7595 14.7346 23.7595C11.5959 23.7595 8.94087 23.0811 6.79212 21.8943C6.71342 22.1115 6.56964 22.2991 6.38039 22.4316C6.19114 22.564 5.96563 22.6349 5.73462 22.6345H2.35962C2.06125 22.6345 1.7751 22.516 1.56412 22.305C1.35315 22.094 1.23462 21.8079 1.23462 21.5095V11.3845C1.23462 11.0862 1.35315 10.8 1.56412 10.589C1.7751 10.378 2.06125 10.2595 2.35962 10.2595H5.73462ZM6.86074 13.6345L6.85962 19.2843L6.91024 19.3203C8.92962 20.7378 11.5599 21.5095 14.7346 21.5095C18.1141 21.5095 21.2585 20.209 23.549 17.9883L23.6986 17.8386L23.5636 17.7261C23.0324 17.3101 22.3885 17.0632 21.7152 17.0174L21.4846 17.0095H19.1097C19.1907 17.3718 19.2346 17.7475 19.2346 18.1345V19.2595H9.10962V17.0095L16.7484 17.0084L16.7101 16.9206C16.4945 16.4701 16.1629 16.0851 15.7493 15.8052C15.3357 15.5252 14.855 15.3604 14.3566 15.3276L14.1721 15.322H10.8759C10.3531 14.7873 9.72867 14.3626 9.03933 14.0728C8.34999 13.783 7.60965 13.634 6.86187 13.6345H6.86074ZM4.60962 12.5095H3.48462V20.3845H4.60962V12.5095ZM20.3596 5.75952C21.2547 5.75952 22.1132 6.1151 22.7461 6.74804C23.379 7.38097 23.7346 8.23942 23.7346 9.13452C23.7346 10.0296 23.379 10.8881 22.7461 11.521C22.1132 12.1539 21.2547 12.5095 20.3596 12.5095C19.4645 12.5095 18.6061 12.1539 17.9731 11.521C17.3402 10.8881 16.9846 10.0296 16.9846 9.13452C16.9846 8.23942 17.3402 7.38097 17.9731 6.74804C18.6061 6.1151 19.4645 5.75952 20.3596 5.75952ZM20.3596 8.00952C20.0613 8.00952 19.7751 8.12805 19.5641 8.33903C19.3531 8.55 19.2346 8.83615 19.2346 9.13452C19.2346 9.43289 19.3531 9.71904 19.5641 9.93002C19.7751 10.141 20.0613 10.2595 20.3596 10.2595C20.658 10.2595 20.9441 10.141 21.1551 9.93002C21.3661 9.71904 21.4846 9.43289 21.4846 9.13452C21.4846 8.83615 21.3661 8.55 21.1551 8.33903C20.9441 8.12805 20.658 8.00952 20.3596 8.00952ZM12.4846 2.38452C13.3797 2.38452 14.2382 2.7401 14.8711 3.37304C15.504 4.00597 15.8596 4.86442 15.8596 5.75952C15.8596 6.65463 15.504 7.51307 14.8711 8.14601C14.2382 8.77894 13.3797 9.13452 12.4846 9.13452C11.5895 9.13452 10.7311 8.77894 10.0981 8.14601C9.4652 7.51307 9.10962 6.65463 9.10962 5.75952C9.10962 4.86442 9.4652 4.00597 10.0981 3.37304C10.7311 2.7401 11.5895 2.38452 12.4846 2.38452ZM12.4846 4.63452C12.1863 4.63452 11.9001 4.75305 11.6891 4.96403C11.4781 5.175 11.3596 5.46115 11.3596 5.75952C11.3596 6.05789 11.4781 6.34404 11.6891 6.55502C11.9001 6.766 12.1863 6.88452 12.4846 6.88452C12.783 6.88452 13.0691 6.766 13.2801 6.55502C13.4911 6.34404 13.6096 6.05789 13.6096 5.75952C13.6096 5.46115 13.4911 5.175 13.2801 4.96403C13.0691 4.75305 12.783 4.63452 12.4846 4.63452Z" fill="#AAA1FF"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Vector.tsx
+import React from 'react';
+export default function Vector() {
+  return <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3325 20.106C4.80952 20.106 0.33252 15.629 0.33252 10.106C0.33252 4.58296 4.80952 0.105957 10.3325 0.105957C15.8555 0.105957 20.3325 4.58296 20.3325 10.106C20.3325 15.629 15.8555 20.106 10.3325 20.106ZM10.3325 18.106C12.4543 18.106 14.4891 17.2631 15.9894 15.7628C17.4897 14.2625 18.3325 12.2277 18.3325 10.106C18.3325 7.98423 17.4897 5.94939 15.9894 4.4491C14.4891 2.94881 12.4543 2.10596 10.3325 2.10596C8.21079 2.10596 6.17596 2.94881 4.67567 4.4491C3.17537 5.94939 2.33252 7.98423 2.33252 10.106C2.33252 12.2277 3.17537 14.2625 4.67567 15.7628C6.17596 17.2631 8.21079 18.106 10.3325 18.106ZM6.83252 12.106H12.3325C12.4651 12.106 12.5923 12.0533 12.6861 11.9595C12.7798 11.8657 12.8325 11.7386 12.8325 11.606C12.8325 11.4733 12.7798 11.3462 12.6861 11.2524C12.5923 11.1586 12.4651 11.106 12.3325 11.106H8.33252C7.66948 11.106 7.03359 10.8426 6.56475 10.3737C6.09591 9.90488 5.83252 9.269 5.83252 8.60596C5.83252 7.94292 6.09591 7.30703 6.56475 6.83819C7.03359 6.36935 7.66948 6.10596 8.33252 6.10596H9.33252V4.10596H11.3325V6.10596H13.8325V8.10596H8.33252C8.19991 8.10596 8.07273 8.15864 7.97897 8.2524C7.8852 8.34617 7.83252 8.47335 7.83252 8.60596C7.83252 8.73857 7.8852 8.86574 7.97897 8.95951C8.07273 9.05328 8.19991 9.10596 8.33252 9.10596H12.3325C12.9956 9.10596 13.6314 9.36935 14.1003 9.83819C14.5691 10.307 14.8325 10.9429 14.8325 11.606C14.8325 12.269 14.5691 12.9049 14.1003 13.3737C13.6314 13.8426 12.9956 14.106 12.3325 14.106H11.3325V16.106H9.33252V14.106H6.83252V12.106Z" fill="#AAA1FF"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/BgParaPowerBi.tsx
+import React from 'react';
+import styles from '../styles/BgParaPowerBi.module.css';
+import Group_2 from './assets/Group_2';
+import Group_1 from './assets/Group_1';
+import TimeCircle from './assets/TimeCircle';
+import Home from './assets/Home';
+import Chart from './assets/Chart';
+import Bag_2 from './assets/Bag_2';
+import Paper from './assets/Paper';
+import User from './assets/User';
+import Group from './assets/Group';
+import Vector from './assets/Vector';
+
+export default function BgParaPowerBi() {
+  return (
+    <div className={styles.BgParaPowerBi_1_52} data-figma-node="1:52">
+      <div className={styles.Rectangle_1_1_53} data-figma-node="1:53"></div>
+      <div className={styles.Group_2_1_54}>
+        <Group_2 data-figma-node="1:54" />
+      </div>
+      <div className={styles.Frame_2_1_57} data-figma-node="1:57">
+        <div className={styles.Rectangle_2_1_58} data-figma-node="1:58"></div>
+        <div className={styles.Group_1_1_59}>
+          <Group_1 data-figma-node="1:59" />
+        </div>
+        <div className={styles.IconlyLightTimeCircle_1_63} data-figma-node="1:63">
+          <div className={styles.TimeCircle_1_65}>
+            <TimeCircle data-figma-node="1:65" />
+          </div>
+        </div>
+        <div className={styles.IconlyLightHome_1_64} data-figma-node="1:64">
+          <div className={styles.Home_1_69}>
+            <Home data-figma-node="1:69" />
+          </div>
+        </div>
+        <div className={styles.IconlyLightChart_1_65} data-figma-node="1:65">
+          <div className={styles.Chart_1_72}>
+            <Chart data-figma-node="1:72" />
+          </div>
+        </div>
+        <div className={styles.IconlyLightBag_3_1_66} data-figma-node="1:66">
+          <div className={styles.Bag_2_1_78}>
+            <Bag_2 data-figma-node="1:78" />
+          </div>
+        </div>
+        <div className={styles.IconlyLightPaper_1_67} data-figma-node="1:67">
+          <div className={styles.Paper_1_82}>
+            <Paper data-figma-node="1:82" />
+          </div>
+        </div>
+        <div className={styles.IconlyLight_2User_1_68} data-figma-node="1:68">
+          <div className={styles.User_1_88}>
+            <User data-figma-node="1:88" />
+          </div>
+        </div><span className={styles.MinhasFinanças_1_69} data-figma-node="1:69"> Minhas Finan&#xE7;as</span>
+        <div className={styles.Line_3_1_70} data-figma-node="1:70"></div>
+      </div>
+      <div className={styles.Line_1_1_71} data-figma-node="1:71"></div>
+      <div className={styles.Line_2_1_72} data-figma-node="1:72"></div>
+      <div className={styles.Rectangle_3_1_73} data-figma-node="1:73"></div>
+      <div className={styles.Rectangle_13_1_76} data-figma-node="1:76"></div>
+      <div className={styles.Rectangle_8_1_77} data-figma-node="1:77"></div>
+      <div className={styles.Rectangle_10_1_78} data-figma-node="1:78"></div>
+      <div className={styles.Rectangle_5_1_79} data-figma-node="1:79"></div>
+      <div className={styles.Rectangle_9_1_80} data-figma-node="1:80"></div>
+      <div className={styles.Rectangle_11_1_81} data-figma-node="1:81"></div>
+      <div className={styles.Rectangle_6_1_82} data-figma-node="1:82"></div>
+      <div className={styles.Rectangle_14_1_83} data-figma-node="1:83"></div>
+      <div className={styles.FundsLine_1_84} data-figma-node="1:84">
+        <div className={styles.Group_2_115}>
+          <Group data-figma-node="2:115" />
+        </div>
+      </div>
+      <div className={styles.PriceTag_3Line_1_85} data-figma-node="1:85">
+        <div className={styles.Group_2_119}>
+          <Group data-figma-node="2:119" />
+        </div>
+      </div>
+      <div className={styles.Dashboard_3Line_1_86} data-figma-node="1:86">
+        <div className={styles.Group_2_127}>
+          <Group data-figma-node="2:127" />
+        </div>
+      </div>
+      <div className={styles.HandCoinLine_1_87} data-figma-node="1:87">
+        <div className={styles.Group_2_131}>
+          <Group data-figma-node="2:131" />
+        </div>
+      </div>
+      <div className={styles.Vector_1_88}>
+        <Vector data-figma-node="1:88" />
+      </div>
+    </div>
+  );
+}
+```
+

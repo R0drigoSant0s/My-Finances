@@ -1,0 +1,309 @@
+/* Estilos para a visualização mobile dos componentes financeiros */
+
+/* Esconder a barra de rolagem mas manter a funcionalidade */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE e Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+
+/* Ajustes para safe-area no iPhone */
+.safe-area-header {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Animações do carrossel */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.carousel-item {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Área de toque expandida para melhor usabilidade em touch */
+.touch-area-expanded {
+  position: relative;
+  touch-action: manipulation;
+}
+
+.touch-area-expanded::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: -1;
+}
+
+/* Animação para indicadores de navegação */
+.nav-indicator {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-indicator-active {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+
+/* Estilos específicos para cards financeiros no mobile */
+@media (max-width: 768px) {
+  .financial-card {
+    transition: transform 0.2s ease;
+  }
+  
+  .financial-card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Melhorias para listas com ações de deslize */
+  .swipe-action-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    touch-action: pan-y;
+  }
+  
+  .swipe-item {
+    position: relative;
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  
+  .swipe-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .swipe-item.swiped {
+    transform: translateX(-80px);
+  }
+  
+  .swipe-item.swiped .swipe-actions {
+    transform: translateX(0);
+  }
+}
+
+/* Animação para o botão de ação flutuante */
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.fab-pulse {
+  animation: pulseButton 2s infinite;
+}
+
+/* Feedback tátil e visual melhorado */
+@keyframes buttonPress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.button-press {
+  animation: buttonPress 0.2s ease-in-out;
+}
+
+/* Transições suaves para a navegação inferior */
+.mobile-bottom-nav {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-bottom-nav.hidden {
+  transform: translateY(100%);
+}
+
+/* Pull to refresh */
+.ptr-container {
+  overflow-y: auto;
+  position: relative;
+  touch-action: pan-y;
+}
+
+.ptr-indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.ptr-active .ptr-indicator {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Estados de carregamento */
+.skeleton-text {
+  position: relative;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  height: 1em;
+  width: 100%;
+}
+
+.skeleton-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Sombras mais suaves para a UI mobile */
+.mobile-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos específicos para listas de transações no mobile */
+.transaction-list-mobile .transaction-item {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.transaction-list-mobile .transaction-item:active {
+  background-color: rgba(0, 0, 0, 0.03);
+  transform: scale(0.99);
+}
+
+/* Escala menor para ícones em telas pequenas */
+@media (max-width: 480px) {
+  .mobile-icon {
+    transform: scale(0.9);
+  }
+  
+  /* Ajustar tipografia para melhor leitura em telas pequenas */
+  .mobile-text-condensed {
+    letter-spacing: -0.01em;
+  }
+  
+  /* Ajustes para fontes em dispositivos móveis */
+  .mobile-font-adjust {
+    font-size: 95%;
+  }
+}
+
+/* Indicador de status de conectividade */
+.offline-indicator {
+  position: fixed;
+  top: env(safe-area-inset-top, 0);
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: #f97316;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.offline-indicator.visible {
+  transform: translateY(0);
+}
+
+/* Gestos de deslizar para navegação */
+.month-swiper {
+  touch-action: pan-y;
+  position: relative;
+}
+
+.month-swiper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 20px;
+  background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.month-swiper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  width: 20px;
+  background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animações para troca de mês */
+@keyframes slide-left-fade {
+  0% { transform: translateX(0); opacity: 1; }
+  40% { opacity: 0; }
+  60% { transform: translateX(-25px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-right-fade {
+  0% { transform: translateX(0); opacity: 1; }
+  40% { opacity: 0; }
+  60% { transform: translateX(25px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-left-fade {
+  animation: slide-left-fade 0.3s ease-in-out;
+}
+
+.animate-slide-right-fade {
+  animation: slide-right-fade 0.3s ease-in-out;
+}
+
+/* Efeito de dica visual para o gesto de deslizar */
+.swipe-hint-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.swipe-hint-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.2), transparent);
+  animation: swipe-hint 2s infinite ease-in-out;
+}
+
+@keyframes swipe-hint {
+  0% { left: -20px; }
+  100% { left: 100%; }
+}

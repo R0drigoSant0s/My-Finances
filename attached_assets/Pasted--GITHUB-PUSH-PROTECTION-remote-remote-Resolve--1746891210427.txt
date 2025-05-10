@@ -1,0 +1,63 @@
+ - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:
+remote:
+remote:       —— Hugging Face User Access Token ————————————————————
+remote:        locations:
+remote:          - commit: ec318b800c455e831f253c1f0646f0469dd9e11f
+remote:            path: attached_assets/app.html:69
+remote:          - commit: ec318b800c455e831f253c1f0646f0469dd9e11f
+remote:            path: server/routes/mistral.ts:48
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/R0drigoSant0s/My-Finances/security/secret-scanning/unblock-secret/2wuMDi4D9S4LAmwRApfubc0PquY
+remote:
+remote:
+remote:
+To https://github.com/R0drigoSant0s/My-Finances.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/R0drigoSant0s/My-Finances.git'
+
+C:\Users\rodri\Downloads\BlankCanvas>git push -u origin main
+Enumerating objects: 291, done.
+Counting objects: 100% (291/291), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (278/278), done.
+Writing objects: 100% (291/291), 3.24 MiB | 597.00 KiB/s, done.
+Total 291 (delta 43), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (43/43), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:
+remote:
+remote:       —— Hugging Face User Access Token ————————————————————
+remote:        locations:
+remote:          - commit: ec318b800c455e831f253c1f0646f0469dd9e11f
+remote:            path: attached_assets/app.html:69
+remote:          - commit: ec318b800c455e831f253c1f0646f0469dd9e11f
+remote:            path: server/routes/mistral.ts:48
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/R0drigoSant0s/My-Finances/security/secret-scanning/unblock-secret/2wuMDi4D9S4LAmwRApfubc0PquY
+remote:
+remote:
+remote:
+To https://github.com/R0drigoSant0s/My-Finances.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/R0drigoSant0s/My-Finances.git'

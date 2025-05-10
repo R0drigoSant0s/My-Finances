@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+    
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 47 100% 50%;
+    --chart-4: 0 90% 60%;
+    --chart-5: 270 75% 60%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-slate-100 text-foreground;
+  }
+  
+  /* Melhorias para modo escuro */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .dark body {
+    @apply bg-slate-900;
+  }
+  
+  /* Estilos para inputs no modo escuro */
+  .dark input[type="text"],
+  .dark input[type="number"],
+  .dark select,
+  .dark textarea {
+    @apply bg-gray-800 border-gray-700 text-gray-100;
+  }
+  
+  /* Estilos para cards no modo escuro */
+  .dark .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  /* Melhoria nas sombras para modo escuro */
+  .dark .shadow-md,
+  .dark .shadow-lg,
+  .dark .shadow-xl {
+    --tw-shadow-color: rgba(0, 0, 0, 0.7);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  
+  /* Melhorias para calendário e modais no modo escuro */
+  .dark .calendar-day {
+    @apply text-gray-200;
+  }
+  
+  .dark .modal-content {
+    @apply bg-gray-900 text-gray-100;
+  }
+  
+  /* Melhorias para botões no modo escuro */
+  .dark button {
+    @apply text-gray-200;
+  }
+  
+  /* Melhorias para textos no modo escuro */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-gray-100;
+  }
+  
+  .dark p, .dark span, .dark label {
+    @apply text-gray-300;
+  }
+  
+  /* Melhorias para cards no modo escuro */
+  .dark .bg-white {
+    @apply bg-gray-900;
+  }
+  
+  .dark .bg-gray-50 {
+    @apply bg-gray-800;
+  }
+  
+  .dark .bg-gray-100 {
+    @apply bg-gray-800;
+  }
+  
+  .dark .border-gray-100 {
+    @apply border-gray-800;
+  }
+  
+  .dark .border-gray-200 {
+    @apply border-gray-800;
+  }
+  
+  /* Melhorias para textos no modo escuro */
+  .dark .text-gray-700 {
+    @apply text-gray-300;
+  }
+  
+  .dark .text-gray-800 {
+    @apply text-gray-200;
+  }
+  
+  .dark .text-gray-900 {
+    @apply text-gray-100;
+  }
+  
+  /* Suporte para notch e safe areas no iPhone */
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .safe-area-padding {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    
+    .safe-area-top {
+      padding-top: env(safe-area-inset-top);
+    }
+    
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    /* Headers principais com ajustes específicos para desktop e mobile */
+    .safe-area-header {
+      padding-top: 1.5rem !important; /* Valor padrão para desktop */
+      min-height: 3.5rem;
+    }
+    
+    /* Header do sidebar com ajustes para desktop */ 
+    .safe-area-sidebar-header {
+      padding-top: 1.5rem !important; /* Valor padrão para desktop */
+      min-height: 3.5rem;
+    }
+    
+    /* Regras específicas para dispositivos iOS (iPhone, iPad) */
+    @supports (-webkit-touch-callout: none) {
+      .safe-area-header {
+        padding-top: calc(env(safe-area-inset-top) + 0.2rem) !important; /* Logo abaixo da status bar */
+        min-height: calc(env(safe-area-inset-top) + 0.5rem); 
+      }
+      
+      .safe-area-sidebar-header {
+        padding-top: calc(env(safe-area-inset-top) + 0.2rem) !important; /* Logo abaixo da status bar */
+        min-height: calc(env(safe-area-inset-top) + 0.5rem);
+      }
+    }
+    
+    /* Classe específica para o conteúdo do menu */
+    .safe-area-menu {
+      padding-top: calc(env(safe-area-inset-top) + 1rem);
+    }
+    
+    /* Garantindo que o conteúdo do cabeçalho fique bem posicionado */
+    .header-content {
+      margin-top: 0; /* Valor padrão para desktop */
+    }
+    
+    /* Ajuste específico para iOS */
+    @supports (-webkit-touch-callout: none) {
+      .header-content {
+        margin-top: -0.2rem; /* Valor fixo mais conservador para iOS */
+      }
+    }
+  }
+  
+  /* Espaçamento ampliado para menus */
+  .nav-menu-item {
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Animação de pulsação para o botão flutuante */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(20, 184, 166, 0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0);
+    transform: scale(1);
+  }
+}
+
+.fab-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Efeito de pressionamento de botão */
+.button-press {
+  transform: scale(0.95);
+}
+
+/* Aumentar área de toque para melhor experiência em dispositivos móveis */
+.touch-area-expanded {
+  position: relative;
+}
+
+.touch-area-expanded::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+}
+
+/* Animação para o calendário */
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

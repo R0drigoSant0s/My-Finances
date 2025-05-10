@@ -1,0 +1,30 @@
+import React, { useState, useRef, useEffect } from 'react';
+import {
+  Wallet,
+  Settings,
+  Plus,
+  Receipt,
+  PiggyBank,
+  History,
+  Moon,
+  Sun,
+  LogOut,
+  Home
+} from 'lucide-react';
+import { useLocation } from 'wouter';
+import MonthSelector from './MonthSelector';
+import FinancialCard from './FinancialCard';
+import BudgetsSection from './BudgetsSection';
+import TransactionsSection from './TransactionsSection';
+import NewTransactionModal from './NewTransactionModal';
+import NewBudgetModal from './NewBudgetModal';
+import TransactionsModal from './TransactionsModal';
+import SettingsModal from './SettingsModal';
+import { EditingTransaction, Transaction, Budget } from './types';
+import { useSupabaseData } from '@/hooks/useSupabaseData';
+import { useToast } from '@/hooks/use-toast';
+import { signOut } from '@/lib/supabase';
+
+export default function Finances() {
+  const [selectedDay, setSelectedDay] = useState(new Date().getDate());
+  const [selectedDate, setSelectedDate] = useState(new Date());
